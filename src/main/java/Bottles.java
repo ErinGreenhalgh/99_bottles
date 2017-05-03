@@ -1,12 +1,24 @@
-/**
- * Created by ErinGreenhalgh on 5/2/17.
- */
+
 public class Bottles {
+    String ofBeer = "of beer";
+    String onWall = "on the wall";
+    String bottlex = "bottle";
+    String plural = "s";
+    String noMore = "no more";
+    String refrain = "Take one down and pass it around";
+
     String verse(int numberOfBottles) {
         String number = Integer.toString(numberOfBottles);
-        String numberMinusOne = Integer.toString(numberOfBottles - 1);
-        return number + " bottles of beer on the wall, " + number + " bottles of beer." +
-                "\nTake one down and pass it around, " + numberMinusOne +
-                " bottles of beer on the wall.";
+        String firstLine = number + " " + bottlex + plural + " " + ofBeer + " " + onWall + ", " + number + " " + bottlex + plural + " " + ofBeer + ".\n";
+
+        int numberMinusOne = numberOfBottles - 1;
+        String lastLine;
+        if (numberMinusOne == 1) {
+            lastLine = refrain + ", " + Integer.toString(numberMinusOne) + " " + bottlex + " " + ofBeer +" " + onWall + ".";
+        } else {
+            lastLine = refrain + ", " + Integer.toString(numberMinusOne) + " " + bottlex + plural + " " + ofBeer + " "+ onWall + ".";
+        }
+
+        return firstLine + lastLine;
     }
 }
