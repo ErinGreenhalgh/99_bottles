@@ -3,9 +3,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by ErinGreenhalgh on 5/2/17.
- */
 public class BottlesTest {
     @Test
     public void testFirstVerse() {
