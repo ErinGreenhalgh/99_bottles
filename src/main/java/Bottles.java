@@ -39,12 +39,12 @@ public class Bottles {
                 lastLine = refrain + ", " + Integer.toString(number) + " " + bottlex + plural + " " + ofBeer + " "+ onWall + ".";
             }
 
-            //the song always has a double new line between the second line and the new first line
-            //but has no double new line at the end
-            if (number == endingNumber) {
-                song = song + lastLine + "\n\n";
-            } else {
+            //always add double new lines after the last line
+            //unlesss we're on the last verse
+            if (number < endingNumber) {
                 song = song + lastLine;
+            } else {
+                song = song + lastLine + "\n\n";
             }
 
 
